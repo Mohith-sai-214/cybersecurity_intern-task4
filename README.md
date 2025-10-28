@@ -13,22 +13,27 @@ To configure and test basic firewall rules using UFW (Uncomplicated Firewall) on
      sudo apt update
      sudo apt install ufw
      sudo ufw enable
+   
 2.**listening Current Firewall Rules**
      sudo ufw status numbered
     -Take a screenshot of the intial rules.
+    
 3. **Blocking Port 23(Telnet)**
      sudo ufw deny 23
    -verfied the rule added successfully.
    -Took a screenshot
-4. **Testing the Blocked Port**
+   
+5. **Testing the Blocked Port**
    -Attempted to connect to port 23 using:
     telnet localhost 23
    -observed connection failure (screen captured).
-5. **Allowing SSH on Port 22**
+   
+7. **Allowing SSH on Port 22**
     sudo ufw allow 22
    -confirmed the rule was appiled
    -Took a Screenshot.
-6. **Removing the Telnet Block Rule**
+   
+9. **Removing the Telnet Block Rule**
    sudo ufw status numbered
    sudo ufw delete <rule/number>
 - Replaced `<rule-number>` with actual number from the status command.
